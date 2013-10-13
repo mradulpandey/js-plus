@@ -70,11 +70,7 @@ module.exports = function (grunt) {
 			}
 		},
 		qunit:{
-			target:{
-				src:{
-					src:['test/**/*.html'],
-				}
-			}
+				all:['tests/**/*.html']
 		}	
 	});
 
