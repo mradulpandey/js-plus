@@ -1,8 +1,8 @@
 module.exports = function (grunt) {
 	
-	var bannerContent = '/*! <%= pkg.name %> v<%= pkg.version %> '+ 
-						'<%= grunt.template.today("yyyy-mm-dd")%> \n'+
-						'* Licence: <%=pkg.licence%>*/\n';
+	var bannerContent = '/* <%= pkg.name %> v<%= pkg.version %> '+
+						'<%= grunt.template.today("dd-mm-yyyy")%> \n\n'+
+						'<%=pkg.licence%>*/\n\n';
 
 	var name = "<%= pkg.name %>-<%=pkg.version%>";
 	var latest = "<%= pkg.name %>";
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
 			},
 			target:
 			{
-				src:['src/**/*.js'],
+                src:['src/js/common.js','src/js/splitter.js','src/js/joinner.js','src/js/arrays.js'],
 				dest: devRelease
 			}
 		},

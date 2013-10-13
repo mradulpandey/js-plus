@@ -1,22 +1,18 @@
 var $ = $ || {};
 $.helper = $.helper || {};
 
-
-
-
-$.helper.Splitter = (function() {
+$.helper.Splitter = function() {
 
 		var that = this;
 
-		_on = " ";
-		_trim = false;
-		_omit = false;
+		var _on = " ";
+		var _trim = false;
+		var _omit = false;
 
 		that.on = function(argument){
 			_on = argument;
 			return that;
 		};
-
 		that.trimResult=function(){
 			_trim = true;
 			return that;
@@ -63,4 +59,4 @@ $.helper.Splitter = (function() {
 
         return that;
 
-})();
+};
