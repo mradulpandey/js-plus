@@ -1,6 +1,6 @@
 //Array.isArray
 
-if(!Array.isArray) {
+if (!Array.isArray) {
     Array.isArray = function (vArg) {
         return Object.prototype.toString.call(vArg) === "[object Array]";
     };
@@ -78,7 +78,7 @@ if (!Array.prototype.forEach) {
 //Array.prototype.filter
 
 if (!Array.prototype.filter) {
-    Array.prototype.filter = function(fun /*, thisp*/) {
+    Array.prototype.filter = function (fun /*, thisp*/) {
         'use strict';
 
         if (!this) {

@@ -1,7 +1,7 @@
 var $ = $ || {};
 $.helper = $.helper || {};
 
-$.helper.Joiner = function() {
+$.helper.Joiner = function () {
 
     var that = this;
 
@@ -9,43 +9,39 @@ $.helper.Joiner = function() {
     var _useForNull = null;
     var _skipNulls = false;
 
-    that.on = function(argument){
+    that.on = function (argument) {
         _on = argument;
         return that;
     };
 
-    that.skipNulls = function(){
+    that.skipNulls = function () {
         _skipNulls = true;
         return that;
     };
 
-    that.useForNull = function(argument){
+    that.useForNull = function (argument) {
         _useForNull = argument;
         return that;
     };
 
-    that.join = function(){
+    that.join = function () {
         var val = "";
 
-        if(!arguments.length) return val;
+        if (!arguments.length) return val;
 
-        for (var i = 0; i < arguments.length; i++)
-        {
-            if(_useForNull)
-            {
-                val += (arguments[i] === null ? _useForNull + _on : arguments[i]+ _on);
+        for (var i = 0; i < arguments.length; i++) {
+            if (_useForNull) {
+                val += (arguments[i] === null ? _useForNull + _on : arguments[i] + _on);
             }
-            else if(_skipNulls)
-            {
+            else if (_skipNulls) {
                 val += (arguments[i] === null ? "" : arguments[i] + _on);
             }
-            else
-            {
+            else {
                 val += (arguments[i] + _on);
             }
         }
 
-        return val.slice(0,val.length -_on.length);
+        return val.slice(0, val.length - _on.length);
     };
 
     return that;

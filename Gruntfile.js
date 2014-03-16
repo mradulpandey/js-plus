@@ -38,7 +38,7 @@ module.exports = function (grunt) {
 			},
 			target:
 			{
-                src:['src/js/common.js','src/js/splitter.js','src/js/joinner.js','src/js/arrays.js'],
+                src:['src/js/common.js','src/js/base/**/*.js','src/js/splitter.js','src/js/joinner.js','src/js/collection/exception.js','src/js/collection/collection.js'],
 				dest: devRelease
 			}
 		},
